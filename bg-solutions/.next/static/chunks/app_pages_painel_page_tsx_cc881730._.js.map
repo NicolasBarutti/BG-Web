@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/gabri/bg-solutions/app/pages/painel/page.tsx"],"sourcesContent":["'use client';\r\n\r\nexport default function Painel() {\r\n  return (\r\n    <div className=\"flex min-h-screen items-center justify-center bg-slate-100\">\r\n      <div className=\"bg-white shadow-xl rounded-2xl p-10 max-w-lg w-full\">\r\n        <h2 className=\"text-2xl font-bold text-blue-700 mb-2\">Painel do Cliente</h2>\r\n        <p className=\"text-gray-700\">Bem-vindo à sua área exclusiva da automação WhatsApp!</p>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;AAEe,SAAS;IACtB,qBACE,6LAAC;QAAI,WAAU;kBACb,cAAA,6LAAC;YAAI,WAAU;;8BACb,6LAAC;oBAAG,WAAU;8BAAwC;;;;;;8BACtD,6LAAC;oBAAE,WAAU;8BAAgB;;;;;;;;;;;;;;;;;AAIrC;KATwB","debugId":null}}]
+}
