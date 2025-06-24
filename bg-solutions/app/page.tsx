@@ -1,8 +1,42 @@
 'use client';
 
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
 
 export default function Home() {
+
+  const avaliacoes = [
+  {
+    nome: 'Julia Ramos',
+    cargo: 'CMO, Agência Criativa',
+    imagem: '/cliente1.png',
+    texto: '“Nos entregaram uma solução visualmente incrível e funcional. Adoramos o resultado!”',
+  },
+  {
+    nome: 'Rafael Souza',
+    cargo: 'Diretor, Conecta Soluções',
+    imagem: '/cliente1.png',
+    texto: '“Equipe ágil, comprometida e técnica. Contrataria novamente sem dúvidas!”',
+  },
+  {
+    nome: 'Ana Silva',
+    cargo: 'CEO, Design Studio',
+    imagem: '/cliente1.png',
+    texto: '“A equipe entendeu perfeitamente o que precisávamos e entregou um site que superou nossas expectativas.”',
+  },
+  {
+    nome: 'Carlos Mendes',
+    cargo: 'Fundador, TechHub',
+    imagem: '/cliente1.png',
+    texto: '“Muito profissionais, prazo respeitado e excelente comunicação do início ao fim.”',
+  },
+];
+
+
   return (
     <main className="bg-white text-gray-900">
       {/* HEADER */}
@@ -275,89 +309,148 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DEPOIMENTOS */}
-      <section id="depoimentos" className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-center mb-2">O Que Nossos Clientes Dizem</h3>
-          <div className="h-1 w-20 bg-blue-700 mx-auto mb-8 rounded" />
-          <div className="bg-slate-100 rounded-xl p-10 flex flex-col items-center shadow">
-            <svg className="w-10 h-10 text-blue-700 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path d="M9 17h6M8 21h8M7 7v4a4 4 0 0 0 4 4h2a4 4 0 0 0 4-4V7"></path>
-            </svg>
-            <p className="text-lg text-center text-gray-700 mb-6">
-              A equipe entendeu perfeitamente o que precisávamos e entregou um site que superou nossas expectativas. Recomendo fortemente.
-            </p>
-            <Image src="/client1.png" width={56} height={56} alt="Ana Silva" className="rounded-full mb-2" />
-            <span className="font-bold">Ana Silva</span>
-            <span className="text-gray-500 text-sm">CEO, Design Studio</span>
-          </div>
-        </div>
-      </section>
 
-      {/* CONTATO */}
-      <section id="contato" className="bg-slate-100 py-16 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
-          <div className="bg-white rounded-xl shadow p-8 flex-1 mb-10 md:mb-0">
-            <h3 className="text-2xl font-bold mb-4">Entre em Contato</h3>
-            <p className="mb-6 text-gray-600">Estamos prontos para transformar suas ideias em soluções digitais de sucesso</p>
-            <form className="space-y-4">
-              <div>
-                <label className="font-semibold">Nome Completo</label>
-                <input type="text" className="w-full border rounded-lg p-2 mt-1" placeholder="Seu nome" />
-              </div>
-              <div>
-                <label className="font-semibold">E-mail</label>
-                <input type="email" className="w-full border rounded-lg p-2 mt-1" placeholder="seu@email.com" />
-              </div>
-              <div>
-                <label className="font-semibold">Mensagem</label>
-                <textarea className="w-full border rounded-lg p-2 mt-1" rows={4} placeholder="Como podemos ajudar?" />
-              </div>
-              <button type="submit" className="bg-blue-700 text-white w-full py-3 rounded-lg font-bold hover:bg-blue-800 transition">
-                Enviar Mensagem
-              </button>
-            </form>
-          </div>
-          <div className="flex-1">
-            <div className="bg-white rounded-xl shadow p-8 h-full flex flex-col justify-between">
-              <div>
-                <h4 className="font-bold mb-4 text-lg">Informações de Contato</h4>
-                <div className="flex items-center mb-3">
-                  <span className="mr-2">📱</span>
-                  <span>(00) 00000-0000</span>
+{/* SEÇÃO DE DEPOIMENTOS COM SWIPER */}
+    <section id="avaliacoes" className="relative py-20 px-6 bg-white">
+      <div className="max-w-6xl mx-auto text-center">
+        <h3 className="text-3xl font-bold mb-2">Avaliações dos Clientes</h3>
+        <div className="h-1 w-20 bg-blue-700 mx-auto mb-10 rounded" />
+
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          loop={true}
+          pagination={{ clickable: true, el: ".custom-pagination" }}
+          spaceBetween={40}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 2 },
+          }}
+          className="pb-10"
+        >
+          {avaliacoes.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-slate-100 rounded-xl shadow p-8 text-center h-full flex flex-col justify-between">
+                <div>
+                  <svg
+                    className="w-8 h-8 text-blue-700 mx-auto mb-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 17h6M8 21h8M7 7v4a4 4 0 0 0 4 4h2a4 4 0 0 0 4-4V7" />
+                  </svg>
+                  <p className="text-gray-700 mb-6">{item.texto}</p>
                 </div>
-                <div className="flex items-center mb-3">
-                  <span className="mr-2">✉️</span>
-                  <span>bgsolutionsdigital@gmail.com</span>
-                </div>
-                <div className="flex items-center mb-3">
-                  <span className="mr-2">📍</span>
-                  <span>
-                    Av. Tecnologia, 123 - Centro<br />
-                    São Paulo, SP - 01234-567
-                  </span>
+                <div>
+                  <Image
+                    src={item.imagem}
+                    alt={item.nome}
+                    width={56}
+                    height={56}
+                    className="mx-auto rounded-full mb-2"
+                  />
+                  <p className="font-bold">{item.nome}</p>
+                  <p className="text-sm text-gray-500">{item.cargo}</p>
                 </div>
               </div>
-              <div>
-                <h4 className="font-bold mb-2 mt-6 text-lg">Horário de Atendimento</h4>
-                <span>Segunda a Sexta: 9h às 18h<br />Sábados: 9h às 13h</span>
-              </div>
-              <a
-                href="https://wa.me/5500000000000"
-                target="_blank"
-                className="mt-6 bg-blue-700 text-white flex items-center justify-center px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition"
-                rel="noopener noreferrer"
-              >
-                <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M21 12.24a9 9 0 1 1-9-9"></path>
-                  <path d="M12 7v5l3 3"></path>
-                </svg>
-                Conversar via WhatsApp
-              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Paginação oculta, mas funcional */}
+        <div className="custom-pagination hidden" />
+      </div>
+    </section>
+
+
+
+
+
+
+{/* SEÇÃO DE CONTATO COM FUNDO PERSONALIZADO */}
+<section className="bg-slate-200 py-20 px-6">
+  <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8 lg:p-12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      {/* CARD DÚVIDAS COM FUNDO AZUL */}
+      <div className="bg-blue-700 text-white rounded-xl p-8 shadow">
+        <h3 className="text-2xl font-bold mb-6">Principais Dúvidas</h3>
+        <ul className="space-y-5 text-sm lg:text-base">
+          <li>
+            <strong className="text-white">Quais serviços vocês oferecem?</strong><br />
+            Desenvolvimento de sites, sistemas personalizados e automações.
+          </li>
+          <li>
+            <strong className="text-white">Como funciona o processo de orçamento?</strong><br />
+            Após o envio do formulário, entraremos em contato com uma proposta personalizada.
+          </li>
+          <li>
+            <strong className="text-white">Em quanto tempo meu projeto fica pronto?</strong><br />
+            Projetos variam de 7 a 30 dias, dependendo da complexidade.
+          </li>
+          <li>
+            <strong className="text-white">O atendimento é remoto?</strong><br />
+            Sim, atendemos todo o Brasil via e-mail, WhatsApp e videochamada.
+          </li>
+        </ul>
+      </div>
+
+      {/* CARD CONTATO COM FUNDO BRANCO */}
+      <div className="bg-white text-gray-800 rounded-xl p-8 shadow flex flex-col justify-between">
+        <div>
+          <h3 className="text-2xl font-bold mb-4">Fale Conosco</h3>
+          <p className="mb-6">Entre em contato pelos nossos canais oficiais. Teremos prazer em atender você!</p>
+
+          <div className="space-y-4 text-gray-700 text-sm lg:text-base">
+            <div className="flex items-center gap-2">
+              <span>📱</span>
+              <span>(99) 99999-9999</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>✉️</span>
+              <span>bgsolutionsdigital@gmail.com</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span>📍</span>
+              <span>
+                Av. Tecnologia, 123 - Centro<br />
+                São Paulo, SP - 01234-567
+              </span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span>⏰</span>
+              <span>
+                Segunda a Sexta: 9h às 18h<br />
+                Sábados: 9h às 13h
+              </span>
             </div>
           </div>
         </div>
-      </section>
+
+        <div className="mt-10 text-center">
+          <span className="text-sm text-gray-600 mb-2 block">Ou fale direto com a gente:</span>
+          <a
+            href="https://wa.me/5599999999999?text=Olá!%20Tenho%20interesse%20em%20uma%20solução%20digital"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 transition text-white font-semibold py-3 px-6 rounded-lg shadow-md w-full sm:w-auto"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 32 32">
+              <path d="M16 .5C7.5.5.5 7.5.5 16c0 2.9.8 5.6 2.2 8l-1.5 5.5L7 30c2.3 1.4 5 2.2 8 2.2 8.5 0 15.5-7 15.5-15.5S24.5.5 16 .5zm0 28c-2.4 0-4.7-.7-6.6-2l-.5-.3-3.9 1 1-3.8-.3-.6c-1.3-2-2-4.4-2-6.9C3.7 8.6 9.3 3 16 3s12.3 5.6 12.3 12.3S22.7 28.5 16 28.5zm7-9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.7.9-.9 1.1-.3.2-.6.1c-1.6-.6-3-2-3.9-3.5-.1-.2 0-.4.1-.6.1-.1.3-.3.4-.4s.2-.3.3-.5 0-.3-.1-.5-.8-1.9-1.1-2.5c-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.5.1-.7.4s-1 1-1 2.5 1 3 1.2 3.3c1.4 2.1 3.3 3.6 5.5 4.4.8.3 1.5.5 2.1.5.6 0 1.2-.2 1.6-.8s.6-1.1.7-1.5c.1-.4 0-.6-.2-.7z" />
+            </svg>
+            Conversar via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
       {/* FOOTER */}
       <footer className="bg-black text-gray-100 py-10 px-6 mt-10">
