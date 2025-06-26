@@ -162,97 +162,145 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVIÇOS */}
-      <section id="servicos" className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <span className="bg-blue-100 text-blue-700 font-semibold text-xs px-3 py-1 rounded-full">NOSSOS SERVIÇOS</span>
-          <h3 className="text-3xl font-bold mt-3 mb-2">Soluções Digitais Completas</h3>
-          <div className="h-1 w-20 bg-blue-700 mb-6 rounded" />
-          <p className="text-gray-600 mb-10 max-w-2xl">
-            Desenvolvemos tecnologias que impulsionam o crescimento do seu negócio.
-          </p>
-          <div className="grid md:grid-cols-4 gap-6">
-            {/* Serviço 1 */}
-            <div className="bg-slate-50 rounded-xl shadow p-6">
-              <div className="bg-blue-100 p-3 rounded-full mb-4 w-fit">
-                <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                  <path d="M9 9h6v6H9z"></path>
-                </svg>
-              </div>
-              <h4 className="font-bold mb-2">Criação de Sites e Landing Pages</h4>
-              <ul className="text-gray-600 text-sm mb-3 list-disc pl-4">
-                <li>Design responsivo</li>
-                <li>Otimização SEO</li>
-                <li>Integração com análise</li>
-                <li>Velocidade otimizada</li>
-              </ul>
-              <a href="/servicos/criacao-sites" className="text-blue-700 font-medium hover:underline">Saiba mais →</a>
-            </div>
-            {/* Serviço 2 */}
-            <div className="bg-slate-50 rounded-xl shadow p-6">
-              <div className="bg-blue-100 p-3 rounded-full mb-4 w-fit">
-                <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-                  <path d="M8 12h8"></path>
-                  <path d="M12 8v8"></path>
-                </svg>
-              </div>
-              <h4 className="font-bold mb-2">Automação de WhatsApp e Atendimento Digital</h4>
-              <ul className="text-gray-600 text-sm mb-3 list-disc pl-4">
-                <li>Chatbots personalizados</li>
-                <li>Integração com CRM</li>
-                <li>Respostas automáticas IA</li>
-                <li>Métricas em tempo real</li>
-              </ul>
-              <a href="/servicos/automacao" className="text-blue-700 font-medium hover:underline">Saiba mais →</a>
-            </div>
-            {/* Serviço 3 */}
-            <div className="bg-slate-50 rounded-xl shadow p-6">
-              <div className="bg-blue-100 p-3 rounded-full mb-4 w-fit">
-                <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M16 12A4 4 0 1 1 8 12a4 4 0 0 1 8 0z"></path>
-                </svg>
-              </div>
-              <h4 className="font-bold mb-2">Desenvolvimento de Sistemas Personalizados</h4>
-              <ul className="text-gray-600 text-sm mb-3 list-disc pl-4">
-                <li>ERPs e gestão</li>
-                <li>Web e mobile apps</li>
-                <li>Integrações entre sistemas</li>
-                <li>Painéis personalizados</li>
-              </ul>
-              <a href="/servicos/desenvolvimento-sistemas" className="text-blue-700 font-medium hover:underline">Saiba mais →</a>
-            </div>
-            {/* Serviço 4 */}
-            <div className="bg-slate-50 rounded-xl shadow p-6">
-              <div className="bg-blue-100 p-3 rounded-full mb-4 w-fit">
-                <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M13 16h-1v-4h-1m2-4h.01"></path>
-                  <circle cx="12" cy="12" r="10"></circle>
-                </svg>
-              </div>
-              <h4 className="font-bold mb-2">Criação de Aplicativos</h4>
-              <ul className="text-gray-600 text-sm mb-3 list-disc pl-4">
-                <li>Aplicativos sob medida para Android e iOS</li>
-                <li>Interface moderna e responsiva</li>
-                <li>Integração com APIs e banco de dados</li>
-                <li>Publicação nas lojas (App Store e Google Play)</li>
-              </ul>
-              <a href="/servicos/criacao-aplicativos" className="text-blue-700 font-medium hover:underline">Saiba mais →</a>
-            </div>
-          </div>
-          {/* FECHA O GRID AQUI */}
-          {/* CTA FINAL */}
-          <div className="mt-16 bg-blue-700 text-white p-10 rounded-xl shadow flex flex-col items-center">
-            <h4 className="text-2xl font-bold mb-2">Não encontrou o serviço que precisa?</h4>
-            <p className="mb-6 text-center max-w-lg">Entre em contato conosco para discutir soluções personalizadas para o seu negócio.</p>
-            <a href="#contato" className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition">
-              Fale conosco →
-            </a>
-          </div>
+<section id="servicos" className="py-16 px-6 bg-white">
+  <div className="max-w-6xl mx-auto">
+    <span className="bg-blue-100 text-blue-700 font-semibold text-xs px-3 py-1 rounded-full">
+      NOSSOS SERVIÇOS
+    </span>
+    <h3 className="text-3xl font-bold mt-3 mb-2">Soluções Digitais Completas</h3>
+    <div className="h-1 w-20 bg-blue-700 mb-6 rounded" />
+    <p className="text-gray-600 mb-10 max-w-2xl">
+      Desenvolvemos tecnologias que impulsionam o crescimento do seu negócio.
+    </p>
+
+    <div className="grid md:grid-cols-4 gap-6">
+      {/* Serviço 1 */}
+      <div className="bg-slate-50 rounded-xl shadow p-6">
+        <div className="bg-blue-100 p-3 rounded-full mb-4 w-fit">
+          <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <path d="M9 9h6v6H9z"></path>
+          </svg>
         </div>
-      </section>
+        <h4 className="font-bold mb-2">Criação de Sites e Landing Pages</h4>
+        <ul className="text-gray-600 text-sm mb-3 list-disc pl-4">
+          <li>Design responsivo</li>
+          <li>Otimização SEO</li>
+          <li>Integração com análise</li>
+          <li>Velocidade otimizada</li>
+        </ul>
+        <a
+          href="/servicos/criacao-sites"
+          className="inline-flex items-center text-blue-700 font-semibold mt-2 group"
+        >
+          <span className="mr-1 group-hover:underline">Saiba mais</span>
+          <svg
+            className="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      {/* Serviço 2 */}
+      <div className="bg-slate-50 rounded-xl shadow p-6">
+        <div className="bg-blue-100 p-3 rounded-full mb-4 w-fit">
+          <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+            <path d="M8 12h8"></path>
+            <path d="M12 8v8"></path>
+          </svg>
+        </div>
+        <h4 className="font-bold mb-2">Automação de WhatsApp e Atendimento Digital</h4>
+        <ul className="text-gray-600 text-sm mb-3 list-disc pl-4">
+          <li>Chatbots personalizados</li>
+          <li>Integração com CRM</li>
+          <li>Respostas automáticas IA</li>
+          <li>Métricas em tempo real</li>
+        </ul>
+        <a
+          href="/servicos/automacao"
+          className="inline-flex items-center text-blue-700 font-semibold mt-2 group"
+        >
+          <span className="mr-1 group-hover:underline">Saiba mais</span>
+          <svg className="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      {/* Serviço 3 */}
+      <div className="bg-slate-50 rounded-xl shadow p-6">
+        <div className="bg-blue-100 p-3 rounded-full mb-4 w-fit">
+          <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M16 12A4 4 0 1 1 8 12a4 4 0 0 1 8 0z"></path>
+          </svg>
+        </div>
+        <h4 className="font-bold mb-2">Desenvolvimento de Sistemas Personalizados</h4>
+        <ul className="text-gray-600 text-sm mb-3 list-disc pl-4">
+          <li>ERPs e gestão</li>
+          <li>Web e mobile apps</li>
+          <li>Integrações entre sistemas</li>
+          <li>Painéis personalizados</li>
+        </ul>
+        <a
+          href="/servicos/desenvolvimento-sistemas"
+          className="inline-flex items-center text-blue-700 font-semibold mt-2 group"
+        >
+          <span className="mr-1 group-hover:underline">Saiba mais</span>
+          <svg className="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      {/* Serviço 4 */}
+      <div className="bg-slate-50 rounded-xl shadow p-6">
+        <div className="bg-blue-100 p-3 rounded-full mb-4 w-fit">
+          <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M13 16h-1v-4h-1m2-4h.01"></path>
+            <circle cx="12" cy="12" r="10"></circle>
+          </svg>
+        </div>
+        <h4 className="font-bold mb-2">Criação de Aplicativos</h4>
+        <ul className="text-gray-600 text-sm mb-3 list-disc pl-4">
+          <li>Aplicativos sob medida para Android e iOS</li>
+          <li>Interface moderna e responsiva</li>
+          <li>Integração com APIs e banco de dados</li>
+          <li>Publicação nas lojas (App Store e Google Play)</li>
+        </ul>
+        <a
+          href="/servicos/criacao-aplicativos"
+          className="inline-flex items-center text-blue-700 font-semibold mt-2 group"
+        >
+          <span className="mr-1 group-hover:underline">Saiba mais</span>
+          <svg className="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    {/* Bloco Azul CTA */}
+    <div className="mt-16 bg-blue-700 text-white p-10 rounded-xl shadow flex flex-col items-center text-center">
+      <h4 className="text-2xl font-bold mb-3">Não encontrou o serviço que precisa?</h4>
+      <p className="mb-6 max-w-2xl">Entre em contato conosco para discutir soluções personalizadas para o seu negócio.</p>
+      <a
+        href="#contato"
+        className="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold text-base hover:bg-blue-100 transition"
+      >
+        Fale conosco →
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
       {/* PORTFÓLIO */}
       <section id="portfolio" className="bg-slate-100 py-16 px-6">
